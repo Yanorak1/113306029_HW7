@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            background-color: #f7f9fc;
+            padding: 20px;
+        }
+        .left-panel, .right-panel {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .left-panel {
+            width: 350px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .left-panel img.photo-panel {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .left-panel h1 {
+            margin: 20px 0;
+            font-size: 1.8em;
+            color: #0078d7;
+        }
+        .left-panel .text-content {
+            text-align: center;
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .right-panel {
+            width: 600px;
+            padding: 20px;
+        }
+        .text-content h2 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #0078d7;
+            color: #333;
+        }
+        .timeline {
+            list-style: none;
+            padding: 0;
+        }
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .timeline-item .year {
+            font-weight: bold;
+            text-align: center;
+            width: 100px;
+            font-size: 1.1em;
+            color: #0078d7;
+        }
+        .timeline-item .description {
+            flex-grow: 1;
+            font-size: 1em;
+            color: #555;
+        }
+        .linkNoUnderline {
+            text-decoration: none;
+            color: #0078d7;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+        .linkNoUnderline:hover {
+            color: #005bb5;
+        }
+        .favorite-music {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .music-item {
+            text-align: center;
+            max-width: 150px;
+        }
+        .music-item img {
+            border-radius: 10px;
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .addMusic {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .addMusic input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .addMusic input[type="submit"] {
+            background-color: #0078d7;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .addMusic input[type="submit"]:hover {
+            background-color: #005bb5;
+        }
+    </style>
+    <title>Personal Profile</title>
+</head>
+<body>
+    <div class="left-panel">
+        <img src="yanson.jpg" class="photo-panel" alt="Personal Photo">
+        <h1>ABOUT ME</h1>
+        <div class="text-content">
+            <p>I am a freshman in the Department of Management Information Systems at National Chengchi University. I am very interested in studying programming and computer science fundamentals. I have experience in writing Java, HTML, CSS, JavaScript, and Python.</p>
+        </div>
+        <h1>CONTACT</h1>
+        <div class="text-content">
+            <p>113306029@g.nccu.edu.tw</p>
+        </div>
+        <img src="nccu.jpg" alt="NCCU Icon" width="100%">
+    </div>
+
+    <div class="right-panel">
+        <section class="text-content">
+            <h2>Education</h2>
+            <ul class="timeline">
+                <li class="timeline-item">
+                    <span class="year">2024 - Now</span>
+                    <span class="description">National Chengchi University, Department of MIS - Computer Science</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="year">2020 - 2024</span>
+                    <span class="description">Taipei Municipal Cheng Gong High School - Participated in Music Creation Club</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="year">2017 - 2020</span>
+                    <span class="description">Middle School Graduation - Started developing an interest in computer science</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="text-content">
+            <h2>Homework List</h2>
+            <ul class="timeline">
+                <li class="timeline-item">
+                    <span class="year">HW1</span>
+                    <span><a href="https://github.com/Yanorak1/HW1.git" class="linkNoUnderline">GitHub Link</a></span>
+                </li>
+                <li class="timeline-item">
+                    <span class="year">HW2</span>
+                    <span><a href="https://github.com/Yanorak1/HW2.git" class="linkNoUnderline">GitHub Link</a></span>
+                </li>
+                <li class="timeline-item">
+                    <span class="year">HW3</span>
+                    <span><a href="https://github.com/Yanorak1/HW3.git" class="linkNoUnderline">GitHub Link</a></span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="text-content">
+            <h2>Favorite Music</h2>
+            <div class="favorite-music" id="music-list">
+                <div class="music-item">
+                    <a href="https://youtu.be/3aatEBIZHNU?si=4DKfOmqyo_5zV9up" class="music-images">
+                        <img src="music.jpg" alt="Music Image">
+                    </a>
+                    <p>Rock 'n' Roll Star</p>
+                </div>
+                <div class="music-item">
+                    <a href="https://youtu.be/TvnYmWpD_T8?si=0q6m3ZJsp53MkH51" class="music-images">
+                        <img src="music.jpg" alt="Music Image">
+                    </a>
+                    <p>Purple Rain</p>
+                </div>
+                <div class="music-item">
+                    <a href="https://youtu.be/xHltM-Py4uM?si=1XBOSvJC0zJTdTTP" class="music-images">
+                        <img src="music.jpg" alt="Music Image">
+                    </a>
+                    <p>Dangerous</p>
+                </div>
+                <div class="music-item">
+                    <a href="https://youtu.be/NYdl3-PxEhQ?si=qKCive3k3fFe6xlv" class="music-images">
+                        <img src="music.jpg" alt="Music Image">
+                    </a>
+                    <p>夏夜晚風</p>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="addMusic">
+            <input type="text" placeholder="Song Link" name="songLink" id="songLink">
+            <input type="text" placeholder="Song Name" name="songName" id="songName">
+            <input type="submit" name="submit" value="Submit" id="submit">
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.getElementById('submit').addEventListener('click', function () {
+            // Get user input values
+            const songLink = document.getElementById('songLink').value.trim();
+            const songName = document.getElementById('songName').value.trim();
+
+            // Validate user input
+            if (!songLink || !songName) {
+                alert('Please enter both the song link and name.');
+                return;
+            }
+
+            // Get the music list container
+            const musicList = document.getElementById('music-list');
+
+            // Create a new music item and append it to the list
+            const newMusicHTML = `
+                <div class="music-item">
+                    <a href="${songLink}" class="music-images" target="_blank">
+                        <img src="music.jpg" alt="Music Image">
+                    </a>
+                    <p>${songName}</p>
+                </div>
+            `;
+
+            musicList.insertAdjacentHTML('beforeend', newMusicHTML);
+
+            // Clear the input fields
+            document.getElementById('songLink').value = '';
+            document.getElementById('songName').value = '';
+        });
+
+
+    </script>
+</body>
+</html>
